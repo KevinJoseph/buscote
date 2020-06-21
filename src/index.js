@@ -1,6 +1,7 @@
-import dotenv from 'dotenv'
+if(process.env.NODE_ENV === 'development'){
+import dotenv from 'dotenv';
 dotenv.config();
-
+}
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';

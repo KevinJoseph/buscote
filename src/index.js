@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV === 'development'){
 import dotenv from 'dotenv';
+if(process.env.NODE_ENV === 'development'){
 dotenv.config();
 }
 import express from 'express';
@@ -30,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/auth', require('./routes/auth'));
 app.use('/users', require('./routes/user'));
+app.use('/request', require('./routes/request'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');

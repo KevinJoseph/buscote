@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "devbabel": "cross-env NODE_ENV=development nodemon src/index.js --exec babel-node",
-    "start": "cross-env NODE_ENV=production node src/index.js"
+    "start": "cross-env NODE_ENV=production babel-node src/index.js --exec"
   },
   "keywords": [],
   "author": "",

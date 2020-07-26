@@ -51,7 +51,7 @@ router.post('/login', async(req, res) => {
       // Generar Token
       let token = jwt.sign({
         user_id: user._id
-      }, process.env.SECRET_KEY, { expiresIn: 60 * 60 * 24 * 30}) // Expira en 30 días
+      }, 'SECRET', { expiresIn: 60 * 60 * 24 * 30}) // Expira en 30 días
  
       // Pasó las validaciones
       return res.json({
